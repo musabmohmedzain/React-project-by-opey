@@ -393,7 +393,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    productCategory: Schema.Attribute.Enumeration<['men', 'women']> &
+    productCategory: Schema.Attribute.Enumeration<
+      ['men', 'women', 'accessories', 'perfumes', 'glasses']
+    > &
       Schema.Attribute.Required;
     productDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     productImg: Schema.Attribute.Media<'images', true> &

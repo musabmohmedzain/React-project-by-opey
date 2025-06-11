@@ -40,7 +40,10 @@
       "required": true,
       "enum": [
         "men",
-        "women"
+        "women",
+        "accessories",
+        "perfumes",
+        "glasses"
       ]
     }
   }

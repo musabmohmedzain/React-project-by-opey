@@ -12,14 +12,14 @@ module.exports = [
             "'self'",
             'data:',
             'blob:',
-            'res.cloudinary.com', // أضف دومين Cloudinary
+            'res.cloudinary.com',
             'dl.airtable.com',
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
-            'res.cloudinary.com', // أيضًا هنا
+            'res.cloudinary.com',
             'dl.airtable.com',
           ],
           upgradeInsecureRequests: null,
@@ -27,7 +27,16 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: [
+        'http://localhost:5000',
+        'https://your-firebase-app.web.app',
+        'https://your-firebase-app.firebaseapp.com',
+      ],
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
